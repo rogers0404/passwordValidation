@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class=" w-100 row row-cols-1 row-cols-md-1 row-cols-sm-1 justify-content-center ">
+            <h1 class="small-text text-center text-secondary">Regex for password Validation client-side</h1>
+        </div>
+    </div>
+    
+    
+
+    <main class="container my-5">
+        <div class="row row-cols-1 row-cols-md-1 row-cols-sm-1 justify-content-center">
+              <div class="col mb-10" >
+                <div class="card bg-secondary text-white" >
+                    <div class="card-body bg-transparent border-1">
+                        <h5 class="card-title">Sign up</h5>
+                    </div>
+                    <ul class="list-group list-group-flush text text-light">
+                        <form class="form">
+                            <li class="list-group-item bg-secondary">                       
+                                <div>
+                                    <label for="user">Email</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-secondary">
+                                <div>
+                                    <input class="w-100" type="text" id="user" />
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-secondary">
+                                <div>
+                                    <label for="password">password:</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-secondary">
+                                <div>
+                                    <input  class="w-100" type="password" id="psw" name="psw" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[-\#\$\.\%\&\*]+)(?=.*[a-zA-Z]).{8,16}$" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-secondary">
+                                <div>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                            </li>
+                        </form>
+                    </ul>   
+                </div>
+            </div>
+            <div id="message" class="container">
+                <h4>Password must contain the following:</h4>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b> and maximum <b>16 characters</b></p>
+                <p id="special" class="invalid">At least a special character <b> # $ % & * . - </b></p>
+                </div>                       
+        </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container p-1 m-0 mw-100">
+        <h5 class="text-left text-secondary w-100 ">
+            &copy; 2020 by 
+            <span>
+                <a class="text-decoration-none" href="https://github.com/rogers0404/" target="_blank"> GitHub: Rogers0404</a>
+            </span>
+        </h5>
+    </div>
+  </footer>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/validate.js"></script>
+    
+</body>
+</html>
